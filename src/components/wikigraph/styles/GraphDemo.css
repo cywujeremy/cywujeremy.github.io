@@ -1,0 +1,179 @@
+.graph-demo-container {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.graph-demo-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.graph-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Increased height for better tree visualization */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.graph-svg {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  user-select: none; /* Prevent text selection during drag */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.graph-svg:active {
+  cursor: grabbing;
+}
+
+.node circle {
+  transition: r 0.3s ease, fill 0.3s ease;
+  cursor: pointer;
+}
+
+.node circle:hover {
+  fill: #4a8c7b;
+}
+
+/* Special styling for root node */
+.node:first-child circle {
+  stroke: #ff9966;
+  stroke-width: 3px;
+}
+
+.node text {
+  pointer-events: none;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Improve text visibility */
+}
+
+.add-button, .add-button-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.node:hover .add-button, 
+.node:hover .add-button-text {
+  opacity: 1;
+}
+
+.add-button:hover {
+  fill: #e6f7f2;
+}
+
+/* Style for tree links */
+.links path {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+  transition: stroke 0.3s ease;
+  pointer-events: none; /* Allow clicking through links */
+}
+
+.links path:hover {
+  stroke: #69b3a2;
+  stroke-width: 3px;
+}
+
+.info-callout {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #69b3a2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+  pointer-events: none; /* Allow clicking through the callout */
+}
+
+.info-callout h3 {
+  margin-top: 0;
+  color: #69b3a2;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.info-callout p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+.graph-instructions {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.graph-instructions h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.graph-instructions ul {
+  padding-left: 20px;
+}
+
+.graph-instructions li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Breathing animation for selected nodes */
+@keyframes breathing {
+  0% {
+    r: 30;
+  }
+  50% {
+    r: 35;
+  }
+  100% {
+    r: 30;
+  }
+}
+
+.breathing {
+  animation: breathing 2s infinite ease-in-out;
+  fill: #4a8c7b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .graph-container {
+    height: 500px;
+  }
+  
+  .info-callout {
+    width: 200px;
+    bottom: 10px;
+    right: 10px;
+  }
+} 

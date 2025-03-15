@@ -9,6 +9,7 @@ import Overview from "../components/wikigraph/Overview";
 import Features from "../components/wikigraph/Features";
 import TechStack from "../components/wikigraph/TechStack";
 import Screenshots from "../components/wikigraph/Screenshots";
+import GraphDemo from "../components/wikigraph/GraphDemo";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -56,6 +57,7 @@ const WikiGraph = () => {
 
 						<div className="wikigraph-content">
 							<Overview />
+							<GraphDemo />
 							<Features />
 							<TechStack />
 							<Screenshots />
