@@ -1,0 +1,29 @@
+.wikigraph-overview {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color, #14b8a6);
+}
+
+.overview-content {
+    line-height: 1.6;
+}
+
+.overview-content p {
+    margin-bottom: 20px;
+} 

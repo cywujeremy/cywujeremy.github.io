@@ -22,7 +22,7 @@ const INFO = {
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "I'm Tharindu N. I live in Sri Lanka, where I design the future.",
 		description:
 			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
 	},
@@ -34,6 +34,14 @@ const INFO = {
 	},
 
 	projects: [
+		{
+			title: "WikiGraph",
+			description:
+				"A tool that transforms Wikipedia pages into interactive knowledge graphs, helping users visualize connections between concepts.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "View Project",
+			link: "/projects/wikigraph",
+		},
 		{
 			title: "Project 1",
 			description:

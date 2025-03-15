@@ -1,0 +1,51 @@
+.wikigraph-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.wikigraph-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+}
+
+.wikigraph-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
+}
+
+.wikigraph-title {
+	width: 100%;
+	text-align: center;
+}
+
+.wikigraph-subtitle {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.wikigraph-content {
+	margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+	.wikigraph-container {
+		padding-top: 60px;
+	}
+
+	.wikigraph-logo {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+} 
