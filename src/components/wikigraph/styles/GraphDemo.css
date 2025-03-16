@@ -46,6 +46,20 @@
   fill: #4a8c7b;
 }
 
+/* Styling for nodes being dragged */
+.node.dragging circle {
+  fill: #4a8c7b;
+  stroke: #fff;
+  stroke-width: 3px;
+  cursor: grabbing;
+}
+
+/* Styling for sibling nodes during drag */
+.node.sibling-during-drag circle {
+  stroke-dasharray: 3;
+  stroke: #69b3a2;
+}
+
 /* Special styling for root node */
 .node:first-child circle {
   stroke: #ff9966;
@@ -140,18 +154,23 @@
 @keyframes breathing {
   0% {
     r: 30;
+    stroke-width: 2px;
   }
   50% {
     r: 35;
+    stroke-width: 3px;
   }
   100% {
     r: 30;
+    stroke-width: 2px;
   }
 }
 
 .breathing {
   animation: breathing 2s infinite ease-in-out;
-  fill: #4a8c7b;
+  fill: #4a8c7b !important;
+  stroke: #fff !important;
+  stroke-width: 3px;
 }
 
 @keyframes fadeIn {
